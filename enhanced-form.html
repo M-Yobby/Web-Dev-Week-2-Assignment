@@ -1,0 +1,178 @@
+<!DOCTYPE html> <!-- -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enhanced Form and Content Page</title>
+  <style> 
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+    h2 {
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+    }
+    table, th, td {
+      border: 1px solid #999;
+      border-collapse: collapse;
+      padding: 8px;
+    }
+    fieldset {
+      margin-bottom: 20px;
+      padding: 15px;
+    }
+    legend {
+      font-weight: bold;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to Meshack's Interactive Web Page</h1>
+    <h2>Week 2 Assignment</h2>
+    <p>This page demonstrates HTML5 features including lists, tables, media, and an enhanced form with built-in validation.</p>
+  </header>
+
+  <!-- Section 1: List -->
+  <section>
+    <h2>Top 5 Study Tips</h2>
+    <ol>
+      <li>Set a regular study schedule</li>
+      <li>Take short breaks for better focus</li>
+      <li>Use active recall and self-testing</li>
+      <li>Eliminate distractions during study time</li>
+      <li>Review material consistently over time</li>
+    </ol>
+  </section>
+
+  <!-- Section 2: Table -->
+  <section>
+    <h2>Weekly Study Schedule</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>Subject</th>
+          <th>Hours</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Monday</td>
+          <td>Math</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>Tuesday</td>
+          <td>Science</td>
+          <td>1.5</td>
+        </tr>
+        <tr>
+          <td>Wednesday</td>
+          <td>History</td>
+          <td>2</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Section 3: Embedded Media -->
+  <section>
+    <h2>Motivational Video & Audio</h2>
+
+    <video width="400" controls>
+      <source src="https://videos.pexels.com/video-files/6281208/6281208-uhd_2560_1440_24fps.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <br><br>
+
+    <audio controls>
+      <source src="background-educational-environment-music-369011.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+  </section>
+
+  <!-- Section 4: Enhanced HTML5 Form -->
+  <section>
+    <h2>Sign Up for Study Updates</h2>
+    <form action="/submit" method="post" autocomplete="on">
+
+      <fieldset>
+        <legend>Personal Information</legend>
+
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" required placeholder="John Doe" minlength="3">
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required placeholder="you@example.com">
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+          <option value="">--Select--</option>
+          <option value="female">Female</option>
+          <option value="male">Male</option>
+          <option value="other">Other</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Account Setup</legend>
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required pattern="[a-zA-Z0-9]{5,12}" placeholder="5-12 characters">
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required minlength="6" placeholder="At least 6 characters">
+
+        <label for="confirm_password">Confirm Password:</label>
+        <input type="password" id="confirm_password" name="confirm_password" required minlength="6" placeholder="Re-type your password" readonly>
+      </fieldset>
+
+      <fieldset>
+        <legend>Preferences</legend>
+
+        <label>
+          <input type="checkbox" name="newsletter" checked>
+          Subscribe to our newsletter
+        </label>
+
+        <label>
+          <input type="radio" name="contact_method" value="email" required>
+          Contact me via Email
+        </label>
+        <label>
+          <input type="radio" name="contact_method" value="phone">
+          Contact me via Phone
+        </label>
+
+        <label for="bio">Short Bio:</label>
+        <textarea id="bio" name="bio" placeholder="Tell us a bit about yourself..." rows="4" maxlength="250"></textarea>
+      </fieldset>
+
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Meshack Yobby. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
